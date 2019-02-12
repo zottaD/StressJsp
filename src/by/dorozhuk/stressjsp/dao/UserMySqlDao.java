@@ -10,7 +10,7 @@ public class UserMySqlDao {
         try(Connection connection = MySqlConnector.getConnection()){
             String username = user.getUsermane();
             String pass = user.getPass();
-
+// http://www.javaportal.ru/java/tutorial/tutorialJDBC/preparedstatement.html for queries with params
             String sql = "SELECT * FROM users WHERE username='" + username +
                     "' AND pass='" + pass + "'";
 
@@ -53,6 +53,7 @@ public class UserMySqlDao {
             boolean isDupl = false;
 
             Statement statement = connection.createStatement();
+//             you can select user by name without loop in java
             ResultSet resultSet = statement.executeQuery("SELECT username, email FROM users");
             while (resultSet.next()){
                 if (resultSet.getString("username").equals(username)){
