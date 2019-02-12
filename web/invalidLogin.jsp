@@ -13,6 +13,7 @@
 <body>
 <center>
     Wrong login or pass
+<!-- jsp should be registered in web.xml as servlet with mapping    -->
     <form action="LoginPage.jsp">
         <input type="submit" value="Return" />
     </form>
