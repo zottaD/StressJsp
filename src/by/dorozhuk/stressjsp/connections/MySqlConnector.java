@@ -1,6 +1,6 @@
 package by.dorozhuk.stressjsp.connections;
 
-
+// imports should be without *, every class in package should present in imports (configure IDE)
 import java.sql.*;
 import java.sql.DriverManager;
 
